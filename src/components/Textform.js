@@ -27,8 +27,8 @@ export default function Textform(props) {
 
   const handleCopy = () => {
     const textarea = document.getElementById("mybox");
-    textarea.select();
     navigator.clipboard.writeText(text);
+    props.showAlert("Text copied successfully","success")
   };
 
 
