@@ -82,7 +82,7 @@ export default function Textform(props) {
         <h2>Your text summary</h2>
         <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words</p>
         <p>{text.length} characters</p>
-        <p>Reading time - {(text.split(" ").filter((element)=>{return element.length!==0}).length - 1) / 125} minutes</p>
+        <p>Reading time - {(text.split(" ").filter((element)=>{return element.length!==0}).length) / 125} minutes</p>
         <h2>Preview</h2>
         <p>{text?text:"Enter some text first"}</p>
       </div>
