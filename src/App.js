@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/TextUtils">
       {/* Shared UI */}
       <Navbar
         title="TextUtils"
