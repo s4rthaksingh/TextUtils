@@ -11,7 +11,13 @@ export default function Textform(props) {
     setText(newtext);
   };
 
+    const handleExtraSpaces = () => {
+    let words = text.split(" ").filter((word) => word !== "");
+    setText(words.join(" "));
+  };
+
   const handleOnChange = (event) => {
+    console.log(text)
     setText(event.target.value);
   };
 
@@ -25,10 +31,7 @@ export default function Textform(props) {
     navigator.clipboard.writeText(text);
   };
 
-  const handleExtraSpaces = () => {
-    let words = text.split(" ").filter((word) => word !== "");
-    setText(words.join(" "));
-  };
+
 
   const handleHeadlineClick = () => {
     let ar = text.split(" ");
@@ -57,29 +60,29 @@ export default function Textform(props) {
           ></textarea>
         </div>
       </div>
-      <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
         Convert to UPPERCASE
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleLowClick}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>
         Convert to lowercase
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleHeadlineClick}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleHeadlineClick}>
         Convert to HeadLine
       </button>
-      <button className="btn btn-danger mx-2" onClick={handleClearClick}>
+      <button className="btn btn-danger mx-2 my-2" onClick={handleClearClick}>
         Clear text
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleCopy}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
         Copy text
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>
         Remove extra spaces
       </button>
       <div className="container my-2" style = {{color : props.mode==='dark'?'white':'#042743'}}>
         <h2>Your text summary</h2>
-        <p>{text.split(" ").length - 1} words</p>
+        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words</p>
         <p>{text.length} characters</p>
-        <p>Reading time - {(text.split(" ").length - 1) / 125} minutes</p>
+        <p>Reading time - {(text.split(" ").filter((element)=>{return element.length!==0}).length - 1) / 125} minutes</p>
         <h2>Preview</h2>
         <p>{text?text:"Enter some text first"}</p>
       </div>
