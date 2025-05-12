@@ -60,22 +60,22 @@ export default function Textform(props) {
           ></textarea>
         </div>
       </div>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
+      <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
         Convert to UPPERCASE
       </button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>
+      <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>
         Convert to lowercase
       </button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleHeadlineClick}>
+      <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleHeadlineClick}>
         Convert to HeadLine
       </button>
-      <button className="btn btn-danger mx-2 my-2" onClick={handleClearClick}>
+      <button disabled={text.length===0} className="btn btn-danger mx-2 my-2" onClick={handleClearClick}>
         Clear text
       </button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
+      <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
         Copy text
       </button>
-      <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>
+      <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>
         Remove extra spaces
       </button>
       <div className="container my-2" style = {{color : props.mode==='dark'?'white':'#042743'}}>
