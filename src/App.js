@@ -51,7 +51,7 @@ function App() {
               />
             }
           />
-          <Route path="/about" element={<About mode={mode}/>} />
+          <Route path="/about" element={<About mode={mode} />} />
         </Routes>
       </div>
     </Router>
