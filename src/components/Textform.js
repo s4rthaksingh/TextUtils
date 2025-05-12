@@ -80,7 +80,7 @@ export default function Textform(props) {
       </button>
       <div className="container my-2" style = {{color : props.mode==='dark'?'white':'#042743'}}>
         <h2>Your text summary</h2>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words</p>
         <p>{text.length} characters</p>
         <p>Reading time - {(text.split(" ").filter((element)=>{return element.length!==0}).length) / 125} minutes</p>
         <h2>Preview</h2>
