@@ -84,7 +84,7 @@ export default function Textform(props) {
         <p>{text.length} characters</p>
         <p>Reading time - {(text.split(" ").filter((element)=>{return element.length!==0}).length) / 125} minutes</p>
         <h2>Preview</h2>
-        <p>{text?text:"Enter some text first"}</p>
+        <p>{text?text:"Nothing to preview"}</p>
       </div>
     </>
   );
