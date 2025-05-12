@@ -1,17 +1,14 @@
 import React from "react";
 
 export default function About(props) {
-
-
   let myStyle = {
-    color:props.mode === 'dark'?'white':'#042743',
-    backgroundColor: props.mode==='dark'?'#042743':'white'
-  }
-
+    color: props.mode === 'dark' ? 'white' : '#042743',
+    backgroundColor: props.mode === 'dark' ? '#042743' : 'white',
+  };
 
   return (
     <div className="container mt-5 mb-3" style={myStyle}>
-      <h1>About Us</h1>
+      <h1>About TextUtils</h1>
 
       <div className="accordion" id="accordionExample" style={myStyle}>
         <div className="accordion-item" style={myStyle}>
@@ -25,7 +22,7 @@ export default function About(props) {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              Accordion Item #1
+              What is TextUtils?
             </button>
           </h2>
 
@@ -35,14 +32,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the first item’s accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong>TextUtils is a simple yet powerful text utility app</strong> designed to help you perform common text manipulations. You can convert text to uppercase or lowercase, remove extra spaces, copy text, and count characters and words easily. It’s perfect for students, developers, or anyone who deals with text regularly.
             </div>
           </div>
         </div>
@@ -58,7 +48,7 @@ export default function About(props) {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+              Why use TextUtils?
             </button>
           </h2>
 
@@ -68,14 +58,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the second item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong>TextUtils offers instant and responsive features</strong> that make text formatting easy and efficient. Whether you're editing a quick paragraph or working on structured content, the tools here save time and effort. It's lightweight, runs in your browser, and doesn’t store any of your data—keeping everything private and secure.
             </div>
           </div>
         </div>
@@ -91,7 +74,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+              Features
             </button>
           </h2>
 
@@ -101,14 +84,14 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the third item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <ul>
+                <li>Convert text to UPPERCASE or lowercase</li>
+                <li>Remove extra spaces from your text</li>
+                <li>Count words and characters instantly</li>
+                <li>Copy text to clipboard with one click</li>
+                <li>Toggle between Light and Dark mode</li>
+              </ul>
+              <strong>Created by Sarthak Singh</strong>
             </div>
           </div>
         </div>
